@@ -32,7 +32,7 @@ var appServicePlanName = 'toy-website'
 var applicationInsightsName = 'toywebsite'
 var storageAccountName = 'mystorage${resourceNameSuffix}'
 var storageAccountImagesBlobContainerName = 'toyimages'
-var sqlServerName = 'toy-website-${resourceNameSuffix}'
+var sqlServerName = 'toy-website2-${resourceNameSuffix}'
 var sqlDatabaseName = 'Toys'
 
 // Define the connection string to access Azure SQL.

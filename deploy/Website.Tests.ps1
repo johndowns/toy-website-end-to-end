@@ -20,4 +20,11 @@ Describe 'Toy Website' {
         Should -BeGreaterOrEqual 300 -Because "HTTP is not secure"
     }
 
+    It 'Returns a success code from the health check endpoint' {
+      $response = Invoke-WebRequest -Uri "https://$HostName/health" -SkipHttpErrorCheck
+      Write-Host $response.Content
+      $response.StatusCode |
+        Should -Be 200 -Because "the website and configuration should be healthy"
+    }
+
 }

@@ -154,7 +154,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' = {
 
 resource sqlServer 'Microsoft.Sql/servers@2021-02-01-preview' = {
   name: sqlServerName
-  location: location
+  location: 'eastus'
   properties: {
     administratorLogin: sqlServerAdministratorLogin
     administratorLoginPassword: sqlServerAdministratorLoginPassword
@@ -173,7 +173,7 @@ resource sqlServerFirewallRule 'Microsoft.Sql/servers/firewallRules@2021-02-01-p
 resource sqlDatabase 'Microsoft.Sql/servers/databases@2021-02-01-preview' = {
   parent: sqlServer
   name: sqlDatabaseName
-  location: location
+  location: 'eastus'
   sku: environmentConfigurationMap[environmentType].sqlDatabase.sku
 }
 
